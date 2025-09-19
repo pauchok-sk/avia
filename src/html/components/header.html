@@ -1,0 +1,186 @@
+<div class="header-t">
+  <div class="container">
+    <div class="header-t__wrapper">
+      <ul class="list header-t__list">
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Клиенты</a></li>
+        <li><a href="#">Отзывы</a></li>
+        <li><a href="#">Вакансии</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <a href="#" class="lang-toggle__btn _active">RU</a>
+        <a href="#" class="lang-toggle__btn">EN</a>
+      </div>
+    </div>
+  </div>
+</div>
+<header class="header">
+  <div class="container">
+    <div class="header__wrapper">
+      <a href="#s-calc" data-anchor class="btn-s header__btn">
+        Рассчитать стоимость доставки
+      </a>
+      <a href="/" class="header__logo">
+        <img src="@img/logo.svg" alt="logo" />
+      </a>
+      <div class="header__contacts">
+        <div class="header__social">
+          <a href="#" target="_blank" class="header__social-btn">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-tg"></use>
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="header__social-btn">
+            <svg>
+              <use xlink:href="img/icons/icons.svg#icon-wh"></use>
+            </svg>
+          </a>
+        </div>
+        <div class="header__contacts-info">
+          <a href="tel:+78432400155" class="header__tel">+7 (843) 240-01-55</a>
+          <a href="mailto:info@aviaservice.su" class="header__mail">
+            info@aviaservice.su
+          </a>
+        </div>
+      </div>
+      <div class="header__mob">
+        <a href="tel:+78432400155" class="header__mob-btn">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-tel"></use>
+          </svg>
+        </a>
+        <div class="header__mob-btn" id="burger-open">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-burger"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="header-b">
+  <div class="container">
+    <div class="header-b__wrapper">
+      <div class="header-b__btn-services">
+        <a href="#" class="header-b__btn-services-flex">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#icon-points"></use>
+          </svg>
+          <span>Наши услуги</span>
+        </a>
+        <div class="header-b__services">
+          <div class="header-b__services-sidebar">
+            <a href="#" data-service="service-1" class="header-b__services-btn _active">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Авиаперевозки</span>
+            </a>
+            <a href="#" data-service="service-2" class="header-b__services-btn">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Автоперевозки</span>
+            </a>
+            <a href="#" data-service="service-3" class="header-b__services-btn">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Таможенное оформление</span>
+            </a>
+            <a href="#" data-service="service-4" class="header-b__services-btn">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Экспедирование груза в аэропорту</span>
+            </a>
+            <a href="#" data-service="service-5" class="header-b__services-btn">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Выставочная логистика</span>
+            </a>
+            <a href="#" data-service="service-6" class="header-b__services-btn">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Консультация по логистике</span>
+            </a>
+            <a href="#" data-service="service-7" class="header-b__services-btn">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Перевозка опасных грузов</span>
+            </a>
+            <a href="#" data-service="service-8" class="header-b__services-btn">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Дополнительная упаковка груза</span>
+            </a>
+            <a href="#" data-service="service-9" class="header-b__services-btn">
+              <img src="@img/service-icon.svg" alt="icon" />
+              <span>Страхование груза</span>
+            </a>
+          </div>
+          <div class="header-b__services-body">
+            <ul data-service-list="service-1" class="list header-b__services-list">
+              <li><a href="#">Генеральные грузы</a></li>
+              <li><a href="#">Срочные авиаперевозки</a></li>
+              <li><a href="#">Грузы требующие температурного режима</a></li>
+              <li><a href="#">Отправка документов</a></li>
+              <li><a href="#">Опасные грузы</a></li>
+              <li><a href="#">Оформление декларации опасных грузов</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <ul class="list header-b__list">
+        <li><a href="#">Авиаперевозки</a></li>
+        <li><a href="#">Автоперевозки</a></li>
+        <li><a href="#">Сборные грузы</a></li>
+        <li><a href="#">Страхование</a></li>
+      </ul>
+      <a href="#modal-order" data-fancybox class="btn-s header-b__btn">
+        Оставить заявку
+      </a>
+    </div>
+  </div>
+</div>
+<div class="header-b__services-overlay"></div>
+
+<div class="burger-overlay" id="burger-overlay"></div>
+<div class="burger" id="burger">
+  <div class="burger__head">
+    <a href="/" class="burger__logo">
+      <img src="@img/logo.svg" alt="logo" />
+    </a>
+    <div class="burger__close" id="burger-close">
+      <svg>
+        <use xlink:href="img/icons/icons.svg#icon-close"></use>
+      </svg>
+    </div>
+  </div>
+  <ul class="list burger__list">
+    <li><a href="#">Главная</a></li>
+    <li><a href="#">О компании</a></li>
+    <li><a href="#">Клиенты</a></li>
+    <li><a href="#">Отзывы</a></li>
+    <li><a href="#">Вакансии</a></li>
+    <li><a href="#">Контакты</a></li>
+    <li><a href="#">Наши услуги</a></li>
+    <li><a href="#">Авиаперевозки</a></li>
+    <li><a href="#">Автоперевозки</a></li>
+    <li><a href="#">Сборные грузы</a></li>
+    <li><a href="#">Страхование</a></li>
+  </ul>
+  <div class="burger__contacts">
+    <div class="burger__social">
+      <a href="#" target="_blank" class="burger__social-btn">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#icon-tg"></use>
+        </svg>
+      </a>
+      <a href="#" target="_blank" class="burger__social-btn">
+        <svg>
+          <use xlink:href="img/icons/icons.svg#icon-wh"></use>
+        </svg>
+      </a>
+    </div>
+    <div class="burger__contacts-info">
+      <a href="tel:+78432400155" class="burger__tel">+7 (843) 240-01-55</a>
+      <a href="mailto:info@aviaservice.su" class="burger__mail">
+        info@aviaservice.su
+      </a>
+    </div>
+  </div>
+  <a href="#modal-order" data-fancybox class="btn-s burger__btn">
+    Оставить заявку
+  </a>
+</div>

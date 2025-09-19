@@ -1,0 +1,308 @@
+.s-hero {
+  position: relative;
+  &__slider {
+    align-items: center;
+    color: white;
+    @media (min-width: 1501px) {
+      display: flex;
+    }
+  }
+  &__slider-btn {
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    height: 45px;
+    color: white;
+    opacity: 0.3;
+
+    transition: opacity 0.3s ease;
+    z-index: 10;
+    @include hover {
+      opacity: 1;
+    }
+    &.swiper-button-disabled {
+      pointer-events: none;
+    }
+
+    &._prev {
+      left: calc((100vw - 1480px) / 2);
+    }
+    &._next {
+      right: calc((100vw - 1480px) / 2);
+    }
+
+    @media (max-width: 1500px) {
+      display: none;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__slide {
+    display: flex !important;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    height: auto !important;
+    z-index: 1;
+    
+    @media (min-width: 1501px) {
+      min-height: 750px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(4, 31, 61, 0.9) 0%,
+        rgba(4, 31, 61, 0.3) 100%
+      );
+      z-index: -1;
+    }
+  }
+  &__slide-body {
+    display: flex;
+    align-items: flex-end;
+    gap: 160px;
+    padding: 96px 80px;
+    @media (max-width: 1500px) {
+      padding: 60px 0px;
+      gap: 30px;
+      justify-content: space-between;
+    }
+    @include tablet {
+      flex-wrap: wrap;
+    }
+  }
+  &__slide-info {
+    flex: 0 1 900px;
+    @include tablet {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__slide-title {
+    font-size: 52px;
+    line-height: 120%;
+    margin: 0px 0px 40px 0px;
+    @include laptop {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    @include laptop-min {
+      font-size: 32px;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      font-size: 28px;
+    }
+    @include tablet-min {
+      font-size: 24px;
+    }
+  }
+  &__slide-descr {
+    max-width: 565px;
+    font-size: 20px;
+    margin: 0px 0px 40px 0px;
+    @include laptop-min {
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+    @include tablet {
+      font-size: 16px;
+    }
+  }
+  &__adv {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 565px;
+    max-width: 100%;
+    @include laptop-min {
+      gap: 20px;
+      padding-top: 20px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__adv-item {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    font-size: 16px;
+  }
+  &__adv-icon {
+    display: block;
+    width: 32px;
+    flex-shrink: 0;
+  }
+  &__btn {
+    margin-top: 40px;
+    min-height: 65px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+    @include tablet-min {
+      min-height: auto;
+      padding-left: 5px !important;
+      padding-right: 5px !important;
+      width: 100%;
+    }
+  }
+  &__slide-video {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 120px;
+    flex-shrink: 0;
+
+    text-align: center;
+    font-size: 16px;
+
+    @include hover {
+      .s-hero__video-circle {
+        background-color: var(--primary-l);
+      }
+    }
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+  &__video-circle {
+    @include flex-center;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+
+    background-color: rgba(69, 180, 253, 0.15);
+    border: 1px solid var(--primary-l);
+    backdrop-filter: blur(10px);
+    color: white;
+
+    transition: background-color 0.3s ease;
+
+    svg {
+      width: 40px;
+      height: 40px;
+    }
+  }
+  &__slider-pagination {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 10;
+
+    @media (min-width: 1501px) {
+      display: none;
+    }
+  }
+  &__form-wrapper {
+    position: absolute;
+    background-color: white;
+    padding: 50px;
+    width: 1480px;
+    max-width: 100%;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%);
+    z-index: 10;
+    @media (max-width: 1500px) {
+      position: static;
+      transform: translate(0,0);
+    }
+    @include laptop {
+      padding: 30px 15px;
+      overflow: hidden;
+    }
+  }
+  &__purpose-buttons {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+    @include laptop {
+      margin: 0 -15px 30px -15px;
+      padding: 0 15px;
+    }
+    @include tablet {
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+  }
+  &__purpose-btn {
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--manatee);
+    padding-bottom: 10px;
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--dark);
+    }
+
+    &._active {
+      color: var(--dark);
+      &::before {
+        right: 0;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background-color: var(--primary-l);
+      height: 1px;
+
+      transition: right 0.3s ease;
+    }
+  }
+  &__form {
+    display: flex;
+    gap: 15px;
+
+    @include laptop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
+
+    .input-control {
+      flex: 0 1 140px;
+      @include first(2) {
+        flex: 1;
+      }
+    }
+  }
+  &__form-submit {
+    flex: 0 1 140px;
+    @include laptop {
+      width: 100%;
+    }
+    @include tablet {
+      grid-column: 2 span;
+    }
+    @include tablet-min {
+      grid-column: 1 span;
+    }
+  }
+}

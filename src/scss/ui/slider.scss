@@ -1,0 +1,73 @@
+.slider-pagination {
+  @include flex-center;
+  gap: 8px;
+
+  &._white {
+    .swiper-pagination-bullet {
+      background-color: rgba(255, 255, 255, 0.4);
+
+      @include hover {
+        background-color: rgba(255, 255, 255, 1);
+      }
+
+      &.swiper-pagination-bullet-active {
+        flex-basis: 32px;
+        background-color: rgba(255, 255, 255, 1);
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    display: block;
+    margin: 0 !important;
+    flex: 0 1 8px;
+    aspect-ratio: 1/1;
+    border-radius: 4px;
+    opacity: 0.6;
+    background-color: rgba(0, 0, 0, 4);
+    transition:
+      background-color 0.3s ease,
+      flex-basis 0.3s ease;
+
+    @include hover {
+      background-color: rgba(0, 0, 0, 1);
+    }
+
+    &.swiper-pagination-bullet-active {
+      flex-basis: 32px;
+      background-color: rgba(0, 0, 0, 1);
+    }
+  }
+}
+
+.slider-nav {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+
+  &__btn {
+    @include flex-center;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    transition:
+      background-color 0.3s ease,
+      opacity 0.3s ease;
+
+    @include hover {
+      background-color: #eee;
+    }
+    &.swiper-button-disabled {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

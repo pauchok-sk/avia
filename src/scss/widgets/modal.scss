@@ -1,0 +1,25 @@
+.modal {
+  display: none;
+  width: 600px;
+  max-width: 100%;
+  padding: 30px;
+  color: var(--dark);
+  @include laptop-min {
+    padding: 30px 20px;
+  }
+  @include tablet {
+    padding: 25px 15px;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__form-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,91 @@
+.select {
+  position: relative;
+
+  &._open {
+    .select-btn svg {
+      transform: rotate(180deg);
+    }
+    .select-body {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+.select-btn {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  .select-input {
+    padding-right: 50px;
+    pointer-events: none;
+    @include tablet {
+      padding-right: 35px;
+    }
+  }
+  svg {
+    position: absolute;
+    right: 30px;
+    width: 14px;
+    height: 14px;
+
+    transition: transform 0.3s ease;
+    @include tablet {
+      right: 15px;
+    }
+  }
+}
+.select-body {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #dfe4ea;
+  max-height: 250px;
+  overflow-y: auto;
+  z-index: 10;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(30px);
+
+  transition:
+    opacity 0.4s ease,
+    visibility 0.4s ease,
+    transform 0.4s ease;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary-l);
+    border-radius: 5px;
+  }
+}
+.select-item {
+  cursor: pointer;
+  padding: 15px 30px;
+  font-size: 16px;
+
+  transition: background-color 0.3s ease;
+  @include hover {
+    background-color: #eee;
+  }
+  @include tablet {
+    padding: 15px 20px;
+  }
+
+  &._active {
+    background-color: #eee;
+    pointer-events: none;
+  }
+}

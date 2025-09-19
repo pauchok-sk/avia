@@ -1,0 +1,86 @@
+.s-adv {
+  @media (min-width: 1366px) {
+    padding-top: 200px !important;
+  }
+  &__grid {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    @include tablet {
+      gap: 20px;
+      row-gap: 30px;
+    }
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: fit-content;
+    max-width: 250px;
+    @include tablet {
+      width: calc(50% - 10px);
+    }
+  }
+  &__item-num {
+    position: relative;
+    padding: 10px 20px;
+    width: fit-content;
+
+    font-weight: 700;
+    font-size: 80px;
+    color: var(--primary);
+
+    z-index: 1;
+
+    @include laptop-min {
+      font-size: 54px;
+    }
+    @include tablet-min {
+      font-size: 40px;
+      padding: 10px 15px;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 40px;
+      z-index: -1;
+      @include tablet {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &::before {
+      left: 0;
+      bottom: 0;
+      border-left: 1px solid var(--primary-l);
+      border-bottom: 1px solid var(--primary-l);
+    }
+    &::after {
+      top: 0;
+      right: 0;
+      border-top: 1px solid var(--primary-l);
+      border-right: 1px solid var(--primary-l);
+    }
+  }
+  &__item-content {
+    font-size: 16px;
+    margin: 20px 0px 0px 0px;
+    @include tablet-min {
+      font-size: 14px;
+    }
+  }
+  &__main {
+    margin-top: 100px;
+    @include laptop {
+      margin-top: 80px;
+    }
+    @include laptop-min {
+      margin-top: 60px;
+    }
+  }
+}

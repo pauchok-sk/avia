@@ -1,0 +1,49 @@
+.body-hidden {
+  overflow: hidden;
+  touch-action: none;
+}
+
+.s-title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  margin: 0;
+  @include laptop-middle {
+    font-size: 32px;
+  }
+  @include laptop-min {
+    font-size: 28px;
+  }
+}
+
+.sect-p {
+  padding: 100px 0px;
+  @include laptop {
+    padding: 80px 0px;
+  }
+  @include laptop-min {
+    padding: 60px 0px;
+  }
+}
+.sect-m {
+  margin: 100px 0px;
+  @include laptop {
+    margin: 80px 0px;
+  }
+  @include laptop-min {
+    margin: 60px 0px;
+  }
+}
+.bg-gray {
+  background-color: var(--gray);
+}
+
+.sect-head {
+  @include flex-between;
+  gap: 30px;
+  margin-bottom: 50px;
+
+  @include laptop-min {
+    margin-bottom: 30px;
+  }
+}

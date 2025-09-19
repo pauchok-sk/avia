@@ -1,0 +1,71 @@
+.input-control {
+  width: 100%;
+}
+.input {
+  padding: 20px 30px;
+  border: 1px solid #e9eef4;
+  background-color: white;
+  outline: none;
+  width: 100%;
+
+  font-size: 16px;
+
+  transition: border-color 0.3s ease;
+
+  &::placeholder {
+    color: #90959e;
+  }
+  &:focus {
+    border-color: var(--primary);
+  }
+
+  &[type=number]::-webkit-outer-spin-button,
+  &[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+  }
+
+  @include tablet {
+    padding: 15px 20px;
+  }
+}
+.input-check {
+  display: none;
+  &:checked + span {
+    &::before {
+      background: url("@img/check-white.svg") center / 12px auto no-repeat;
+      border-color: var(--primary);
+      background-color: var(--primary);
+    }
+  }
+}
+.input-check + span {
+  cursor: pointer;
+  display: flex;
+  align-items: start;
+  gap: 15px;
+
+  font-size: 14px;
+  color: #90959e;
+
+  a {
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #e9eef4;
+
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+  }
+}
