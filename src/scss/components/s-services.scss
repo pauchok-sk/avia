@@ -1,0 +1,25 @@
+.s-services {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__slider {
+    padding-top: 50px;
+    margin-top: -50px !important;
+    @include tablet {
+      overflow: visible;
+    }
+  }
+  &__slide {
+    box-sizing: border-box;
+    height: auto !important;
+
+    @include tablet {
+      width: 350px !important; 
+      max-width: 100%;
+    }
+
+    .card-service {
+      height: 100%;
+    }
+  }
+}

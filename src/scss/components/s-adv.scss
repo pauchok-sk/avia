@@ -2,6 +2,9 @@
   @media (min-width: 1366px) {
     padding-top: 200px !important;
   }
+  @include laptop-min {
+    overflow: hidden;
+  }
   &__grid {
     display: flex;
     justify-content: space-between;
@@ -82,5 +85,56 @@
     @include laptop-min {
       margin-top: 60px;
     }
+  }
+  &__slider {
+    @include laptop-min {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    @include laptop-min {
+      width: 320px !important;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 120px;
+      background: linear-gradient(
+        90deg,
+        #fff 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
+      z-index: -1;
+    }
+  }
+  &__slide-icon {
+    display: block;
+    width: 200px;
+  }
+  &__slide-body {
+    padding: 20px 30px 30px 30px;
+    @include laptop-middle {
+      padding: 20px;
+    }
+  }
+  &__slide-title {
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0px 0px 20px 0px;
+    @include laptop-middle {
+      font-size: 20px;
+    }
+  }
+  &__slide-content {
+    margin: 0;
+    font-size: 16px;
+    line-height: 140%;
   }
 }

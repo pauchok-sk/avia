@@ -69,3 +69,14 @@
       border-color 0.3s ease;
   }
 }
+
+.input-radio {
+  display: none;
+  min-height: 60px;
+
+  & + .btn-s {
+  }
+}
+.label-radio {
+  width: 100%;
+}
