@@ -49,4 +49,50 @@
   @include laptop-min {
     margin-bottom: 30px;
   }
+  @include tablet {
+    flex-wrap: wrap;
+  }
+}
+
+.content {
+  font-size: 16px;
+  line-height: 140%;
+
+  p {
+    margin: 0;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.rect-decor {
+  position: relative;
+  z-index: 1;
+
+  &._primary-l {
+    &::before, &::after {
+      border-color: var(--primary-l);
+    }
+  }
+
+  &::before, &::after {
+    position: absolute;
+    content: "";
+    width: 40px;
+    height: 40px;
+    z-index: -1;
+  }
+  &::before {
+    border-left: 1px solid var(--primary);
+    border-bottom: 1px solid var(--primary);
+    left: 0;
+    bottom: 0;
+  }
+  &::after {
+    right: 0;
+    top: 0;
+    border-top: 1px solid var(--primary);
+    border-right: 1px solid var(--primary);
+  }
 }

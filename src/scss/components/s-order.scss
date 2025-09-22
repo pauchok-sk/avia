@@ -1,0 +1,54 @@
+.s-order {
+  &__body {
+    @include flex-between;
+    position: relative;
+    overflow: hidden;
+    padding: 80px 100px;
+    color: white;
+    gap: 30px;
+    background-color: #0e3461;
+    z-index: 1;
+
+    @include laptop {
+      padding: 60px;
+    }
+    @include tablet {
+      padding: 30px 20px;
+      flex-wrap: wrap;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -360px;
+      left: -45px;
+      width: 1200px;
+      aspect-ratio: 1/1;
+      border-radius: 50%;
+      background-color: var(--primary);
+      z-index: -1;
+
+      @include laptop {
+        width: 80%;
+      }
+      @include tablet {
+      top: 50%;
+      left: 0;
+      transform: translate(-50%, -50%);        
+      }
+    }
+  }
+  &__title {
+    max-width: 600px;
+    @include tablet {
+      max-width: none;
+    }
+  }
+  &__btn {
+    width: 340px;
+    max-width: 100%;
+    @include tablet {
+      width: 100%;
+    }
+  }
+}

@@ -32,6 +32,16 @@
   background-color: white;
   padding: 13px 0px;
   z-index: 90;
+
+  transition: transform .4s ease, box-shadow .4s ease;
+
+  &._hide {
+    transform: translateY(-100%);
+  }
+  &._shadow {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+  }
+
   &__wrapper {
     display: grid;
     align-items: center;

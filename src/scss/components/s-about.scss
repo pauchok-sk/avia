@@ -1,0 +1,34 @@
+.s-about {
+  margin-bottom: 0;
+  &__btn {
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__content {
+    display: flex;
+    gap: 60px;
+    row-gap: 30px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__content-item {
+    flex: 1;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__img {
+    display: block;
+    width: 100%;
+    margin-top: 50px;
+    @include laptop-min {
+      margin-top: 30px;
+    }
+  }
+}

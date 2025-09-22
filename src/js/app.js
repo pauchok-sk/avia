@@ -1,5 +1,6 @@
 import "../scss/style.scss";
 import burger from "./files/burger.js";
+import headerScroll from "./files/headerScroll.js";
 import headerServices from "./files/headerServices.js";
 import inputmask from "./files/inputmask.min.js";
 import purposeInput from "./files/purposeInput.js";
@@ -14,6 +15,7 @@ inputmask();
 sliders();
 select();
 purposeInput();
+headerScroll();
 
 Fancybox.bind("[data-fancybox]");
 // Fancybox.show([{ src: "#modal-order", type: "inline" }]);

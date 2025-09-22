@@ -1,0 +1,18 @@
+.s-partners {
+  overflow: hidden;
+  &__slider {
+    overflow: visible !important;
+  }
+  &__slide {
+    @include flex-center;
+    height: auto !important;
+    width: 200px;
+    background-color: white;
+
+    transition: opacity .3s ease;
+
+    @include hover {
+      opacity: 0.8;
+    }
+  }
+}

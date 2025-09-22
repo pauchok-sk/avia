@@ -1,0 +1,42 @@
+.s-steps {
+  @include tablet {
+    overflow: hidden;
+  }
+  &__slider {
+    @include tablet {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    @include tablet {
+      width: 340px !important;
+      max: width 100%; 
+    }
+  }
+  &__slide-num {
+    @include flex-center;
+    width: 80px;
+    aspect-ratio: 1/1;
+
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 52px;
+    @include laptop-min {
+      font-size: 32px;
+      width: 60px;
+      height: 60px;
+    }
+  }
+  &__slide-title {
+    margin: 30px 0px 15px 0px;
+    font-weight: 500;
+    font-size: 20px;
+    @include laptop-min {
+      font-size: 18px;
+    }
+  }
+  &__slide-content {
+    color: var(--manatee);
+    margin: 0;
+  }
+}
