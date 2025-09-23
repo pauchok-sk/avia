@@ -16,11 +16,14 @@
 @import "./ui/card-service";
 @import "./ui/breadcrumbs";
 @import "./ui/card-service-category";
+@import "./ui/pagination";
+@import "./ui/tooltip";
 
 // widgets
 @import "./widgets/lang-toggle";
 @import "./widgets/burger";
 @import "./widgets/modal";
+@import "./widgets/hero-form";
 
 // components
 @import "./components/header";
@@ -37,5 +40,7 @@
 @import "./components/s-contacts";
 @import "./components/s-archive-service";
 @import "./components/s-category";
+@import "./components/intro";
+@import "./components/s-about-service";
 
 @import "./components/footer";

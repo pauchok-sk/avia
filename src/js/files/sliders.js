@@ -123,4 +123,31 @@ export default function sliders() {
       },
     });
   }
+
+  const aboutServiceSlider = document.querySelector(".s-about-service__slider");
+
+  if (aboutServiceSlider) {
+    const swiper = new Swiper(aboutServiceSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-about-service .slider-nav__btn._prev",
+        nextEl: ".s-about-service .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-about-service .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
 }

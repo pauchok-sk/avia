@@ -1,0 +1,101 @@
+.hero-form {
+  position: absolute;
+  background-color: white;
+  padding: 50px;
+  width: 1480px;
+  max-width: 100%;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  color: var(--dark);
+  z-index: 10;
+  @media (max-width: 1500px) {
+    position: static;
+    transform: translate(0, 0);
+    width: 100%;
+  }
+  @include laptop {
+    padding: 30px 15px;
+    overflow: hidden;
+  }
+  &__purpose-buttons {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+    @include laptop {
+      margin: 0 -15px 30px -15px;
+      padding: 0 15px;
+    }
+    @include tablet {
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+  }
+  &__purpose-btn {
+    position: relative;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--manatee);
+    padding-bottom: 10px;
+    white-space: nowrap;
+
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--dark);
+    }
+
+    &._active {
+      color: var(--dark);
+      &::before {
+        right: 0;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      left: 0;
+      right: 100%;
+      bottom: 0;
+      background-color: var(--primary-l);
+      height: 1px;
+
+      transition: right 0.3s ease;
+    }
+  }
+  &__form {
+    display: flex;
+    gap: 15px;
+
+    @include laptop {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
+
+    .input-control {
+      flex: 0 1 140px;
+      @include first(2) {
+        flex: 1;
+      }
+    }
+  }
+  &__form-submit {
+    flex: 0 1 140px;
+    @include laptop {
+      width: 100%;
+    }
+    @include tablet {
+      grid-column: 2 span;
+    }
+    @include tablet-min {
+      grid-column: 1 span;
+    }
+  }
+}

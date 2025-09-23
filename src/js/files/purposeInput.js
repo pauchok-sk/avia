@@ -1,5 +1,5 @@
 export default function purposeInput() {
-  const buttons = document.querySelectorAll(".s-hero__purpose-btn");
+  const buttons = document.querySelectorAll(".hero-form__purpose-btn");
 
   if (buttons.length) {
     const input = document.querySelector("#hero-purpose-input");

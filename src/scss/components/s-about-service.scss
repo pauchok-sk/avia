@@ -1,0 +1,61 @@
+.s-about-service {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    @include laptop {
+      gap: 30px;
+    }
+    @include laptop-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__main {
+  }
+  &__gallery {
+    overflow: hidden;
+    padding: 50px;
+    background-color: var(--gray);
+
+    @include laptop {
+      padding: 30px;
+    }
+    @include tablet {
+      padding: 30px 20px;
+    }
+    @include tablet-min {
+      padding: 25px 15px;
+    }
+  }
+  &__gallery-head {
+    @include flex-between;
+    gap: 30px;
+    margin-bottom: 50px;
+    @include tablet {
+      margin-bottom: 30px;
+    }
+  }
+  &__slider {
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+
+    @include laptop-middle {
+      width: 170px !important;
+    }
+  }
+  &__slide-icon {
+    display: block;
+    width: 60px;
+  }
+}

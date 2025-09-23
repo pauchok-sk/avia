@@ -1,0 +1,41 @@
+.pagination {
+  margin-top: 30px;
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  .prev,
+  .next {
+    display: none !important;
+  }
+  .page-numbers {
+    @include flex-center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--primary);
+
+    font-size: 16px;
+    font-weight: 500;
+
+    transition:
+      color 0.3s ease,
+      background-color 0.3s ease;
+
+    @include hover {
+      color: white;
+      background-color: var(--primary);
+    }
+    @include tablet {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    &.current {
+      color: white;
+      background-color: var(--primary);
+    }
+  }
+}

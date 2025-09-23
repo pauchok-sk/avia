@@ -31,7 +31,7 @@
 }
 .input-check {
   display: none;
-  &:checked + span {
+  &:checked + span, &:checked + .label-check {
     &::before {
       background: url("@img/check-white.svg") center / 12px auto no-repeat;
       border-color: var(--primary);
@@ -39,6 +39,7 @@
     }
   }
 }
+
 .input-check + span {
   cursor: pointer;
   display: flex;
@@ -46,6 +47,36 @@
   gap: 15px;
 
   font-size: 14px;
+  color: #90959e;
+
+  a {
+    text-decoration: underline;
+    transition: color 0.3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    border: 1px solid #e9eef4;
+
+    transition:
+      background-color 0.3s ease,
+      border-color 0.3s ease;
+  }
+}
+.label-check {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-size: 16px;
   color: #90959e;
 
   a {
@@ -84,6 +115,9 @@
   width: 100%;
 }
 .input-name {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   font-size: 14px;
   margin-bottom: 15px;
 }
@@ -101,4 +135,11 @@
   .input-control {
     grid-column: 3 span;
   }
+}
+
+.input-questions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  row-gap: 15px;
 }

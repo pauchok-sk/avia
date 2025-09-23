@@ -1,0 +1,80 @@
+.intro {
+  @media (min-width: 1501px) {
+    padding-bottom: 110px;
+  }
+  
+  &__inside {
+    position: relative;
+    padding: 115px 0px 225px 0px;
+    color: white;
+    z-index: 1;
+
+    @include desktop {
+      padding-bottom: 0;
+    }
+    @include laptop {
+      padding-top: 80px;
+    }
+    @include laptop-min {
+      padding-top: 70px;
+    }
+    @include tablet {
+      padding-top: 30px;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background-color: #041c37;
+      opacity: 0.8;
+      z-index: -1;
+    }
+  }
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 30px;
+    @include laptop-min {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  }
+  &__main {
+    flex: 0 1 61%;
+    @include laptop-min {
+      flex: none;
+      width: 100%;
+    }
+  }
+  &__content {
+    max-width: 750px;
+    margin: 0px 0px 30px 0px;
+  }
+  &__btn {
+    @include tablet-min {
+      width: 100%;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex: 1;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 16px;
+
+      svg {
+        color: var(--primary-l);
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+      }
+    }
+  }
+}
