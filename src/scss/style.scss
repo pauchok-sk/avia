@@ -7,12 +7,15 @@
 @import "./base/config-container";
 
 // ui
+@import "./ui/title";
 @import "./ui/button";
 @import "./ui/list";
 @import "./ui/form";
 @import "./ui/slider";
 @import "./ui/select";
 @import "./ui/card-service";
+@import "./ui/breadcrumbs";
+@import "./ui/card-service-category";
 
 // widgets
 @import "./widgets/lang-toggle";
@@ -32,5 +35,7 @@
 @import "./components/s-offer";
 @import "./components/s-order";
 @import "./components/s-contacts";
+@import "./components/s-archive-service";
+@import "./components/s-category";
 
 @import "./components/footer";

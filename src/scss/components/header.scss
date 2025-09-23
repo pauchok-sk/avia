@@ -302,10 +302,17 @@
     }
   }
   &__services-list {
-    display: flex;
+    display: none;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
+    opacity: 0;
+
+    transition: opacity .3s ease;
+
+    &._active {
+      display: flex;
+    }
     @include laptop-middle {
       gap: 20px;
     }

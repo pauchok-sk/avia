@@ -1,0 +1,26 @@
+.breadcrumbs {
+  padding: 25px 0px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid var(--gray);
+  @include laptop-min {
+    margin-bottom: 30px;
+  }
+}
+.aioseo-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 15px;
+}
+.aioseo-breadcrumb {
+  color: var(--manatee);
+  a {
+    color: var(--dark);
+    transition: color .3s ease;
+    @include hover {
+      color: var(--primary);
+    }
+  }
+}
+.aioseo-breadcrumb-separator {
+}

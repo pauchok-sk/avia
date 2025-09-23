@@ -1,0 +1,44 @@
+.card-service-category {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #eef4fb;
+  padding: 30px;
+  gap: 60px;
+
+  font-weight: 500;
+  font-size: 24px;
+
+  transition: border-color .3s ease;
+  @include hover {
+    border-color: var(--pink);
+  }
+  @include laptop-middle {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  svg {
+    display: block;
+    width: 22px;
+    height: 22px;
+    color: var(--pink);
+    margin-left: auto;
+
+    transition: transform 0.3s ease;
+    @include hover {
+      transform: rotate(45deg);
+    }
+  }
+
+  span {
+    transition: color .3s ease;
+    @include hover {
+      color: var(--pink);
+    }
+  }
+}
