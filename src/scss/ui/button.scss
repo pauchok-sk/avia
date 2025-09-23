@@ -22,6 +22,10 @@
     border-color: var(--primary-hover);
   }
 
+  @include tablet {
+    padding: 14px 20px;
+  }
+
   &._blur {
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.1);
@@ -75,5 +79,25 @@
       background-color: var(--gray);
       color: var(--dark);
     }
+  }
+}
+
+.btn-play {
+  @include flex-center;
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--pink);
+
+  transition: transform .3s ease;
+  @include hover {
+    transform: scale(1.08);
+  }
+
+  svg {
+    width: 25px;
+    height: 25px;
   }
 }

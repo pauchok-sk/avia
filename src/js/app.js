@@ -7,6 +7,7 @@ import purposeInput from "./files/purposeInput.js";
 import select from "./files/select.js";
 import sliders from "./files/sliders.js";
 import spoller from "./files/spoller.js";
+import map from "./files/map.js";
 
 spoller();
 burger();
@@ -16,6 +17,7 @@ sliders();
 select();
 purposeInput();
 headerScroll();
+map();
 
 Fancybox.bind("[data-fancybox]");
 // Fancybox.show([{ src: "#modal-order", type: "inline" }]);

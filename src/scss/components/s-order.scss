@@ -1,54 +1,76 @@
 .s-order {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include laptop-middle {
+      grid-template-columns: 1fr;
+    }
+  }
   &__body {
-    @include flex-between;
-    position: relative;
-    overflow: hidden;
-    padding: 80px 100px;
-    color: white;
-    gap: 30px;
-    background-color: #0e3461;
-    z-index: 1;
-
+    padding: 50px;
+    background-color: var(--gray);
     @include laptop {
-      padding: 60px;
+      padding: 30px;
     }
     @include tablet {
       padding: 30px 20px;
-      flex-wrap: wrap;
+    }
+    @include tablet-min {
+      padding: 25px 15px;
     }
 
-    &::before {
-      position: absolute;
-      content: "";
-      top: -360px;
-      left: -45px;
-      width: 1200px;
-      aspect-ratio: 1/1;
-      border-radius: 50%;
+    &._primary {
       background-color: var(--primary);
-      z-index: -1;
-
-      @include laptop {
-        width: 80%;
-      }
-      @include tablet {
-      top: 50%;
-      left: 0;
-      transform: translate(-50%, -50%);        
-      }
+      color: white;
     }
   }
   &__title {
-    max-width: 600px;
-    @include tablet {
-      max-width: none;
+    margin-bottom: 30px;
+  }
+  &__content {
+    margin-bottom: 30px;
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  &__form-bottom {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    @include tablet-min {
+      flex-wrap: wrap;
     }
   }
-  &__btn {
-    width: 340px;
+  &__form-send {
+    width: 205px;
+    flex-shrink: 0;
     max-width: 100%;
-    @include tablet {
+    @include tablet-min {
       width: 100%;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    
+    li {
+      display: flex;
+      align-items: start;
+      gap: 25px;
+      
+      @include tablet {
+        gap: 15px;
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        color: var(--primary-l);
+      }
     }
   }
 }

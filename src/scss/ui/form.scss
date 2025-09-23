@@ -83,3 +83,22 @@
 .label-radio {
   width: 100%;
 }
+.input-name {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.input-radios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+
+  .label-radio {
+    @include tablet-min {
+      grid-column: 3 span;
+    }
+  }
+  .input-control {
+    grid-column: 3 span;
+  }
+}
