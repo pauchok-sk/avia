@@ -3,13 +3,48 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px;
+
+    @include laptop-middle {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
   }
   &__item {
+    position: relative;
+    z-index: 1;
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 120px 0px 0px 0px;
+      background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.2) 100%);
+      z-index: -1;
+    }
   }
-  &__icon {
+  &__item-icon {
+    display: block;
+    width: 200px;
+    @include tablet {
+      width: 150px;
+    }
+  }
+  &__item-body {
+    padding: 20px 30px 30px 30px;
+    @include tablet {
+      padding: 20px;
+    }
   }
   &__item-title {
+    font-weight: 500;
+    font-size: 22px;
+    margin: 0px 0px 20px 0px;
+    @include tablet {
+      font-size: 18px;
+    }
   }
   &__item-content {
+    margin: 0;
   }
 }
