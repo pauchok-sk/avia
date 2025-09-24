@@ -1,0 +1,29 @@
+.s-docs {
+  overflow: hidden;
+  &__slider {
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+
+    @include laptop-middle {
+      width: 280px !important;
+      max-width: 100%;
+    }
+    @include tablet {
+      width: 240px !important;
+      font-size: 18px;
+    }
+  }
+  &__slide-icon {
+    display: block;
+    width: 140px;
+  }
+}

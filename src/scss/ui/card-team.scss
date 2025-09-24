@@ -1,0 +1,36 @@
+.card-team {
+  display: flex;
+  flex-direction: column;
+  &__img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/1.27;
+    object-fit: cover;
+  }
+  &__body {
+    flex: 1;
+    position: relative;
+    margin-top: 10px;
+    padding: 10px 24px;
+    background-color: var(--gray);
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 4px;
+      top: 10px;
+      bottom: 10px;
+      left: 0;
+      border-radius: 0px 4px 4px 0px;
+      background-color: var(--primary-l);
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0px 0px 10px 0px;
+  }
+  &__status {
+    font-size: 16px;
+  }
+}

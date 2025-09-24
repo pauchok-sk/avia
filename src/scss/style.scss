@@ -5,6 +5,7 @@
 @import "./base/media";
 @import "./base/body-config";
 @import "./base/config-container";
+@import "./base/classes";
 
 // ui
 @import "./ui/title";
@@ -18,12 +19,14 @@
 @import "./ui/card-service-category";
 @import "./ui/pagination";
 @import "./ui/tooltip";
+@import "./ui/card-team";
 
 // widgets
 @import "./widgets/lang-toggle";
 @import "./widgets/burger";
 @import "./widgets/modal";
 @import "./widgets/hero-form";
+@import "./widgets/modal-calc";
 
 // components
 @import "./components/header";
@@ -42,5 +45,14 @@
 @import "./components/s-category";
 @import "./components/intro";
 @import "./components/s-about-service";
+@import "./components/s-docs";
+@import "./components/s-app-services";
+@import "./components/s-features";
+@import "./components/s-interest";
+@import "./components/s-team";
+@import "./components/s-transportation";
+@import "./components/s-danger";
+@import "./components/s-articles";
+@import "./components/s-grid";
 
 @import "./components/footer";

@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  @@include('html/head.html',{ "title":"pauchoo0k" })
+  <body class="body">
+    @@include('html/components/header.html')
+    <main>
+
+      <section class="intro _simple">
+        <div
+          style="
+            background: url(&quot;@img/intro-single.jpg&quot;) center / cover
+              no-repeat;
+          "
+          class="intro__inside"
+        >
+          <div class="container">
+            <div class="intro__wrapper">
+              <div class="intro__main">
+                <h1 class="m-title">Консультации по логистике</h1>
+                <p class="content intro__content">
+                  Опыт и знание мировой логистики позволяют перевезти
+                  практически любой груз. Наша агентская сеть расположена по
+                  всему миру в крупнейших аэропортах Европы, Азии, Австралии,
+                  Северной и Южной Америки, а также Африки.
+                </p>
+                <div class="intro__main-nav">
+                  <a
+                    href="#modal-order"
+                    data-fancybox
+                    class="btn-s _blur intro__btn"
+                  >
+                    Получить консультацию
+                  </a>
+                  <div class="intro__price">От 6 000 ₽</div>
+                </div>
+              </div>
+              <ul class="list intro__list">
+                <li>
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#icon-vector"></use>
+                  </svg>
+                  <span>Ведение под ключ</span>
+                </li>
+                <li>
+                  <svg>
+                    <use xlink:href="img/icons/icons.svg#icon-vector"></use>
+                  </svg>
+                  <span>Прозрачные условия работы – без скрытых платежей</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sect-p s-adv bg-gray">
+        <div class="container">
+          <div class="s-adv__grid">
+            <div class="s-adv__item">
+              <div class="s-adv__item-num">24</div>
+              <p class="s-adv__item-content">
+                авиакомпаний
+                <br />
+                сотрудничают с нами
+              </p>
+            </div>
+            <div class="s-adv__item">
+              <div class="s-adv__item-num">3 186</div>
+              <p class="s-adv__item-content">
+                довольных
+                <br />
+                грузополучаетелей
+              </p>
+            </div>
+            <div class="s-adv__item">
+              <div class="s-adv__item-num">100</div>
+              <p class="s-adv__item-content">
+                грузов доставляем
+                <br />
+                ежедневно
+              </p>
+            </div>
+            <div class="s-adv__item">
+              <div class="s-adv__item-num">25</div>
+              <p class="s-adv__item-content">
+                лет на рынке
+                <br />
+                авиаперевозок
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sect-m s-about-service">
+        <div class="container">
+          <div class="s-about-service__wrapper">
+            <div class="s-about-service__main">
+              <div class="sect-head">
+                <h2 class="s-title">Об услуге</h2>
+              </div>
+              <div class="content">
+                <p>
+                  Принимая во внимание показатели успешности, курс на
+                  социально-ориентированный национальный проект
+                  <br />
+                  требует анализа модели развития. Идейные соображения высшего
+                  порядка, а также реализация намеченных
+                  <br />
+                  плановых заданий создаёт предпосылки для новых принципов
+                  формирования материально-технической и
+                  <br />
+                  кадровой базы.
+                </p>
+                <p>
+                  Как принято считать, элементы политического процесса,
+                  инициированные исключительно синтетически,
+                  <br />
+                  подвергнуты целой серии независимых исследований.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      @@include('html/components/s-articles.html')
+      @@include('html/components/s-grid.html')
+
+    </main>
+    @@include('html/components/modals.html')
+    @@include('html/components/footer.html')
+
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

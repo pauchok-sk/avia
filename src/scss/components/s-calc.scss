@@ -1,4 +1,17 @@
 .s-calc {
+  position: relative;
+  z-index: 1;
+
+  &._bg {
+    &::before {
+      position: absolute;
+      content: "";
+      inset: 0;
+      background: rgba(34, 83, 139, 0.3);
+      z-index: -1;
+    }
+  }
+
   &__head {
     position: relative;
     padding: 100px 0px 50px 0px;
@@ -98,7 +111,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
-
 
     .input-control {
       &:first-child {
@@ -233,5 +245,19 @@
     @include tablet-min {
       grid-template-columns: 1fr;
     }
+  }
+  &__app-form-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2ebf7;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__app-form-send {
+    width: 100%;
   }
 }

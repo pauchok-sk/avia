@@ -1,4 +1,4 @@
-<section class="sect-m s-calc" id="s-calc">
+<section class="sect-p pt-0 s-calc _bg" id="s-calc" style="background: url('@img/calc-app.jpg') center / cover no-repeat;">
   <div class="s-calc__head">
     <div class="container">
       <div class="s-calc__head-wrapper">
@@ -69,26 +69,104 @@
           </div>
         </div>
       </div>
-      <div class="s-calc__app-question">
+      <div class="s-calc__question">
         <div class="input-name">
           <span>Вы знаете габариты груза?</span>
           <div class="tooltip">
             <svg>
-              <use xlink:href='img/icons/icons.svg#icon-question'></use>
+              <use xlink:href="img/icons/icons.svg#icon-question"></use>
             </svg>
             <div class="tooltip__content">
               <div class="tooltip__content-inside">
-                Также как убеждённость некоторых оппонентов не даёт нам иного выбора, кроме определения вывода текущих активов.
+                Также как убеждённость некоторых оппонентов не даёт нам иного
+                выбора, кроме определения вывода текущих активов.
               </div>
             </div>
           </div>
         </div>
         <div class="input-questions">
-          <input type="radio" name="Вы знаете габариты груза?" id="weight-yes" value="Да" checked class="input-check">
+          <input
+            type="radio"
+            name="Вы знаете габариты груза?"
+            id="weight-yes"
+            value="Да"
+            checked
+            class="input-check"
+          />
           <label for="weight-yes" class="label-check">Да</label>
-          <input type="radio" name="Вы знаете габариты груза?" id="weight-no" value="Нет" class="input-check">
+          <input
+            type="radio"
+            name="Вы знаете габариты груза?"
+            id="weight-no"
+            value="Нет"
+            class="input-check"
+          />
           <label for="weight-no" class="label-check">Нет</label>
         </div>
+      </div>
+      <div class="s-calc__form-view mt-0">
+        <div class="s-calc__form-view-title">Выберите удобный вид связи</div>
+        <div class="s-calc__form-view-grid">
+          <input
+            type="radio"
+            id="view-connect-wh"
+            checked
+            name="view-connect"
+            class="input-radio"
+          />
+          <label for="view-connect-wh" class="btn-s _outline label-radio">
+            WhatsApp
+          </label>
+          <input
+            type="radio"
+            id="view-connect-tg"
+            name="view-connect"
+            class="input-radio"
+          />
+          <label for="view-connect-tg" class="btn-s _outline label-radio">
+            Telegram
+          </label>
+          <input
+            type="radio"
+            id="view-connect-tel"
+            name="view-connect"
+            class="input-radio"
+          />
+          <label for="view-connect-tel" class="btn-s _outline label-radio">
+            Звонок
+          </label>
+          <div class="input-control">
+            <input
+              type="tel"
+              placeholder="Укажите ваш номер телефона"
+              class="input"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="s-calc__app-form-nav">
+        <span class="wpcf7-form-control-wrap">
+          <span class="wpcf7-form-control wpcf7-acceptance">
+            <span class="wpcf7-list-item">
+              <label>
+                <input type="checkbox" class="input-check" />
+                <span class="wpcf7-list-item-label">
+                  <span>
+                    Я&nbsp;соглашаюсь с
+                    <a href="/personal-data" target="_blank">
+                      Политикой обработки персональных данных
+                    </a>
+                    и
+                    <a href="/privacy-policy" target="_blank">
+                      Политикой конфиденциальности
+                    </a>
+                  </span>
+                </span>
+              </label>
+            </span>
+          </span>
+        </span>
+        <button class="btn-s _pink s-calc__app-form-send">Отправить</button>
       </div>
     </div>
   </div>

@@ -1,0 +1,96 @@
+<section class="s-transportation">
+  <div class="container">
+    <div class="s-transportation__wrapper">
+      <div class="s-transportation__content">
+        <img
+          src="@img/avialogo.svg"
+          alt="logo"
+          class="s-transportation__logo"
+        />
+        <h2 class="s-title">Заказать международную грузоперевозку</h2>
+        <p class="content s-transportation__descr">
+          Если у Вас есть вопросы или Вы хотите сделать заявку, просто заполните
+          контактную форму, и мы ответим вам в ближайшее время
+        </p>
+      </div>
+      <form action="#" class="form s-transportation__form js-form">
+        <div class="input-control">
+          <input type="text" placeholder="Ваше имя" class="input" />
+        </div>
+        <div class="form__views">
+          <div class="input-name">Выберите удобный вид связи</div>
+          <div class="form__views-grid">
+            <input
+              type="radio"
+              id="transportation-view-connect-wh"
+              checked
+              name="transportation-view-connect"
+              class="input-radio"
+            />
+            <label
+              for="transportation-view-connect-wh"
+              class="btn-s _white label-radio"
+            >
+              WhatsApp
+            </label>
+            <input
+              type="radio"
+              id="transportation-view-connect-tg"
+              name="transportation-view-connect"
+              class="input-radio"
+            />
+            <label
+              for="transportation-view-connect-tg"
+              class="btn-s _white label-radio"
+            >
+              Telegram
+            </label>
+            <input
+              type="radio"
+              id="transportation-view-connect-tel"
+              name="transportation-view-connect"
+              class="input-radio"
+            />
+            <label
+              for="transportation-view-connect-tel"
+              class="btn-s _white label-radio"
+            >
+              Звонок
+            </label>
+            <div class="input-control">
+              <input
+                type="tel"
+                placeholder="Укажите ваш номер телефона"
+                class="input"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form__nav">
+          <span class="wpcf7-form-control-wrap">
+            <span class="wpcf7-form-control wpcf7-acceptance">
+              <span class="wpcf7-list-item">
+                <label>
+                  <input type="checkbox" class="input-check" />
+                  <span class="wpcf7-list-item-label">
+                    <span>
+                      Я&nbsp;соглашаюсь с
+                      <a href="/personal-data" target="_blank">
+                        Политикой обработки персональных данных
+                      </a>
+                      и
+                      <a href="/privacy-policy" target="_blank">
+                        Политикой конфиденциальности
+                      </a>
+                    </span>
+                  </span>
+                </label>
+              </span>
+            </span>
+          </span>
+          <button class="btn-s _pink form__send">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

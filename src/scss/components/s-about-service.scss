@@ -1,21 +1,24 @@
 .s-about-service {
   &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    align-items: start;
     gap: 50px;
     @include laptop {
       gap: 30px;
     }
     @include laptop-min {
+      display: grid;
       grid-template-columns: 1fr;
     }
   }
   &__main {
+    flex: 1;
   }
   &__gallery {
     overflow: hidden;
     padding: 50px;
     background-color: var(--gray);
+    flex: 1;
 
     @include laptop {
       padding: 30px;

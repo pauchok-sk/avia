@@ -22,4 +22,4 @@ map();
 anchors();
 
 Fancybox.bind("[data-fancybox]");
-// Fancybox.show([{ src: "#modal-order", type: "inline" }]);
+// Fancybox.show([{ src: "#modal-calc", type: "inline" }]);

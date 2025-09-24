@@ -1,0 +1,23 @@
+.s-danger {
+  overflow: hidden;
+  &__slider {
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    display: flex !important;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    @include laptop-middle {
+      width: 265px !important;
+      max-width: 100%;
+    }
+  }
+  &__slide-icon {
+    display: block;
+    width: 200px;
+  }
+}

@@ -8,8 +8,9 @@
   bottom: 0;
   transform: translate(-50%, 50%);
   color: var(--dark);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
   z-index: 10;
-  @media (max-width: 1500px) {
+  @include desktop {
     position: static;
     transform: translate(0, 0);
     width: 100%;

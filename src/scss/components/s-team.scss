@@ -1,0 +1,21 @@
+.s-team {
+  @include laptop-middle {
+    overflow: hidden;
+  }
+  &__slider {
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    height: auto !important;
+    @include laptop-middle {
+      width: 355px !important;
+      max-width: 100%;
+    }
+
+    .card-team {
+      height: 100%;
+    }
+  }
+}

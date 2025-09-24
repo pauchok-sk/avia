@@ -2,18 +2,44 @@
   @media (min-width: 1501px) {
     padding-bottom: 110px;
   }
-  
+  &._simple {
+    padding: 0;
+    .intro__inside {
+      padding: 200px 0px;
+      @include desktop {
+        padding: 150px 0px;
+      }
+      @include laptop {
+        padding: 120px 0px;
+      }
+      @include laptop-middle {
+        padding: 100px 0px;
+      }
+      @include laptop-min {
+        padding: 80px 0px;
+      }
+      @include tablet {
+        padding: 50px 0px;
+      }
+    }
+  }
+
   &__inside {
     position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 650px;
     padding: 115px 0px 225px 0px;
     color: white;
     z-index: 1;
 
     @include desktop {
       padding-bottom: 0;
+      display: block;
     }
     @include laptop {
       padding-top: 80px;
+      min-height: auto;
     }
     @include laptop-min {
       padding-top: 70px;
@@ -35,7 +61,9 @@
     display: flex;
     align-items: center;
     gap: 50px;
-    margin-bottom: 30px;
+    @include desktop {
+      margin-bottom: 30px;
+    }
     @include laptop-min {
       flex-wrap: wrap;
       gap: 30px;
@@ -52,9 +80,27 @@
     max-width: 750px;
     margin: 0px 0px 30px 0px;
   }
+  &__main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 75px;
+    row-gap: 20px;
+    @include tablet {
+      gap: 30px;
+      row-gap: 20px;
+    }
+  }
   &__btn {
     @include tablet-min {
       width: 100%;
+    }
+  }
+  &__price {
+    font-size: 24px;
+    line-height: 100%;
+    @include tablet {
+      font-size: 24px;
     }
   }
   &__list {

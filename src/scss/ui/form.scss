@@ -31,7 +31,8 @@
 }
 .input-check {
   display: none;
-  &:checked + span, &:checked + .label-check {
+  &:checked + span,
+  &:checked + .label-check {
     &::before {
       background: url("@img/check-white.svg") center / 12px auto no-repeat;
       border-color: var(--primary);
@@ -53,7 +54,7 @@
     text-decoration: underline;
     transition: color 0.3s ease;
     @include hover {
-      color: var(--primary);
+      color: var(--primary-l);
     }
   }
 
@@ -142,4 +143,39 @@
   flex-wrap: wrap;
   gap: 25px;
   row-gap: 15px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  &__views-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    .input-control {
+      grid-column: 3 span;
+    }
+    .btn-s {
+      @include tablet {
+        grid-column: 3 span;
+      }
+    }
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    @include tablet-min {
+      flex-wrap: wrap;
+    }
+  }
+  &__send {
+    width: 205px;
+    max-width: 100%;
+    flex-shrink: 0;
+    @include tablet-min {
+      width: 100%;
+    }
+  }
 }

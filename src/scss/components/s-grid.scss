@@ -1,0 +1,15 @@
+.s-grid {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px;
+  }
+  &__item {
+  }
+  &__icon {
+  }
+  &__item-title {
+  }
+  &__item-content {
+  }
+}

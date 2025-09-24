@@ -1,7 +1,4 @@
 .s-adv {
-  @media (min-width: 1366px) {
-    padding-top: 200px !important;
-  }
   @include laptop-min {
     overflow: hidden;
   }

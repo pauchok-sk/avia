@@ -1,5 +1,10 @@
 .s-hero {
   position: relative;
+  @media (min-width: 1366px) {
+    & + section {
+      padding-top: 200px !important;
+    }
+  }
   &__slider {
     align-items: center;
     color: white;
@@ -47,7 +52,7 @@
     box-sizing: border-box;
     height: auto !important;
     z-index: 1;
-    
+
     @media (min-width: 1501px) {
       min-height: 750px;
     }

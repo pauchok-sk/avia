@@ -150,4 +150,112 @@ export default function sliders() {
       },
     });
   }
+
+  const docsSlider = document.querySelector(".s-docs__slider");
+
+  if (docsSlider) {
+    const swiper = new Swiper(docsSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-docs .slider-nav__btn._prev",
+        nextEl: ".s-docs .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-docs .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
+
+  const teamSlider = document.querySelector(".s-team__slider");
+
+  if (teamSlider) {
+    const swiper = new Swiper(teamSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-team .slider-nav__btn._prev",
+        nextEl: ".s-team .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-team .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  const dangerSlider = document.querySelector(".s-danger__slider");
+
+  if (dangerSlider) {
+    const swiper = new Swiper(dangerSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-danger .slider-nav__btn._prev",
+        nextEl: ".s-danger .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-danger .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
+
+  const articlesSlider = document.querySelector(".s-articles__slider");
+
+  if (articlesSlider) {
+    const swiper = new Swiper(articlesSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-articles .slider-nav__btn._prev",
+        nextEl: ".s-articles .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-articles .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
 }
