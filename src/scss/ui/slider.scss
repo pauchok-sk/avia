@@ -75,6 +75,9 @@
       pointer-events: none;
       opacity: 0.7;
     }
+    &.swiper-button-lock {
+      display: none;
+    }
 
     @include laptop-min {
       width: 38px;

@@ -7,9 +7,35 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
+    margin-bottom: 100px;
+    @include laptop {
+      margin-bottom: 80px;
+    }
+    @include laptop-min {
+      margin-bottom: 60px;
+    }
     @include tablet {
       gap: 20px;
       row-gap: 30px;
+    }
+
+    &._grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 60px;
+      row-gap: 40px;
+      .s-adv__item {
+        max-width: none !important;
+        width: 100% !important;
+      }
+
+      @include laptop-min {
+        gap: 40px;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include tablet-min {
+        grid-template-columns: 1fr;
+      }
     }
   }
   &__item {
@@ -72,15 +98,6 @@
     margin: 20px 0px 0px 0px;
     @include tablet-min {
       font-size: 14px;
-    }
-  }
-  &__main {
-    margin-top: 100px;
-    @include laptop {
-      margin-top: 80px;
-    }
-    @include laptop-min {
-      margin-top: 60px;
     }
   }
   &__slider {

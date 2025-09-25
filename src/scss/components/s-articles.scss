@@ -6,6 +6,7 @@
     }
   }
   &__slide {
+    box-sizing: border-box;
     @include laptop-middle {
       width: 355px !important;
       max-width: 100%;
@@ -28,5 +29,42 @@
   }
   &__slide-content {
     color: var(--manatee);
+  }
+  &__slide-btn {
+    @include flex-center;
+    gap: 20px;
+    width: 100%;
+    aspect-ratio: 1/0.7;
+    padding: 40px;
+
+    font-weight: 500;
+    font-size: 20px;
+
+    transition: color .3s ease;
+    @include hover {
+      color: var(--pink);
+
+      svg {
+        transform: rotate(45deg);
+      }
+    }
+    @include laptop {
+      padding: 30px;
+    }
+    @include laptop-min {
+      padding: 20px;
+    }
+    @include tablet {
+      padding: 15px;
+      font-size: 16px;
+    }
+
+    svg {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      color: var(--pink);
+      transition: transform .3s ease;
+    }
   }
 }

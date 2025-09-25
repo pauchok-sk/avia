@@ -6,6 +6,7 @@
   border: 1px solid var(--primary);
   background-color: var(--primary);
   outline: none;
+  gap: 15px;
 
   text-align: center;
   font-size: 16px;
@@ -79,6 +80,11 @@
       background-color: var(--gray);
       color: var(--dark);
     }
+  }
+
+  svg {
+    width: 18px;
+    height: 18px;
   }
 }
 
