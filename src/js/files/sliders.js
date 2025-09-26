@@ -343,4 +343,31 @@ export default function sliders() {
       },
     });
   }
+
+  const certificatesSlider = document.querySelector(".s-certificates__slider");
+
+  if (certificatesSlider) {
+    const swiper = new Swiper(certificatesSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-certificates .slider-nav__btn._prev",
+        nextEl: ".s-certificates .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-certificates .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
 }

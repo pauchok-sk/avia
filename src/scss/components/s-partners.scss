@@ -9,10 +9,43 @@
     width: 200px;
     background-color: white;
 
-    transition: opacity .3s ease;
+    transition: opacity 0.3s ease;
 
     @include hover {
       opacity: 0.8;
+    }
+  }
+  &__grid {
+    @include flex-center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @include laptop-middle {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+    }
+    @include laptop-min {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include tablet-min {
+      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__grid-item {
+    width: calc((100% / 6) - 17px);
+
+    @include laptop-middle {
+      width: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
     }
   }
 }
