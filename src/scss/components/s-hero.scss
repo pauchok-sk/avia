@@ -167,8 +167,8 @@
     flex-direction: column;
     align-items: center;
     gap: 15px;
-    width: 120px;
     flex-shrink: 0;
+    outline: none;
 
     text-align: center;
     font-size: 16px;
@@ -181,23 +181,15 @@
     @include tablet {
       margin: 0 auto;
     }
-  }
-  &__video-circle {
-    @include flex-center;
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 50%;
 
-    background-color: rgba(69, 180, 253, 0.15);
-    border: 1px solid var(--primary-l);
-    backdrop-filter: blur(10px);
-    color: white;
+    .btn-play {
+      width: 120px;
+      height: 120px;
 
-    transition: background-color 0.3s ease;
-
-    svg {
-      width: 40px;
-      height: 40px;
+      svg {
+        width: 40px;
+        height: 40px;
+      }
     }
   }
   &__slider-pagination {

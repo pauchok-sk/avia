@@ -258,4 +258,89 @@ export default function sliders() {
       },
     });
   }
+
+  const infoSlider = document.querySelector(".s-info__slider");
+
+  if (infoSlider) {
+    const swiper = new Swiper(infoSlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-info .slider-nav__btn._prev",
+        nextEl: ".s-info .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-info .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1366: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+      },
+    });
+  }
+
+  const historySlide = document.querySelector(".s-history__slider");
+
+  if (historySlide) {
+    const swiper = new Swiper(historySlide, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-history .slider-nav__btn._prev",
+        nextEl: ".s-history .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-history .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: "auto",
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
+
+  const gallerySlider = document.querySelector(".s-gallery__slider");
+
+  if (gallerySlider) {
+    const swiper = new Swiper(gallerySlider, {
+      speed: 900,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      autoplay: {
+        delay: 3500,
+      },
+      navigation: {
+        prevEl: ".s-gallery .slider-nav__btn._prev",
+        nextEl: ".s-gallery .slider-nav__btn._next",
+      },
+      pagination: {
+        el: ".s-gallery .slider-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        1200: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+      },
+    });
+  }
 }

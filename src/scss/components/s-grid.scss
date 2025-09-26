@@ -11,6 +11,21 @@
     @include tablet-min {
       grid-template-columns: 1fr;
     }
+
+    &._grid-4 {
+      grid-template-columns: repeat(4, 1fr);
+
+      @include laptop {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include laptop-middle {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 30px;
+      }
+      @include tablet-min {
+        grid-template-columns: 1fr;
+      }
+    }
   }
   &__item {
     position: relative;
@@ -19,7 +34,11 @@
       position: absolute;
       content: "";
       inset: 120px 0px 0px 0px;
-      background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.2) 100%);
+      background: linear-gradient(
+        90deg,
+        #fff 0%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
       z-index: -1;
     }
   }

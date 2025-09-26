@@ -1,0 +1,27 @@
+.s-info {
+  overflow: hidden;
+  &__slider {
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    box-sizing: border-box;
+    padding: 25px;
+    height: auto !important;
+    border: 1px solid #eef4fb;
+
+    transition: border-color .3s ease;
+
+    @include hover {
+      border-color: var(--pink);
+    }
+    @include laptop-middle {
+      width: 280px !important;
+      max-width: none;
+    }
+  }
+  &__slide-content {
+    margin: 0;
+  }
+}

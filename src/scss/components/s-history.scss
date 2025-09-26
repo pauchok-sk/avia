@@ -1,0 +1,46 @@
+.s-history {
+  overflow: hidden;
+  &__slider {
+    overflow: visible !important;
+  }
+  &__slide {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+    box-sizing: border-box;
+    width: 600px !important;
+    max-width: 100%;
+  }
+  &__slide-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 1/0.7;
+  }
+  &__slide-title {
+    font-weight: 500;
+    font-size: 22px;
+    margin: 20px 0px;
+    @include tablet {
+      font-size: 18px;
+    }
+  }
+  &__slide-content {
+    color: var(--manatee);
+    margin: 0px 0px 20px 0px;
+  }
+  &__slide-year {
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: auto;
+    color: var(--primary);
+    @include tablet {
+      font-size: 28px;
+    }
+  }
+  &__slide-icon {
+    width: 24px;
+    height: 18px;
+    color: var(--primary-l);
+    margin-top: 20px;
+  }
+}

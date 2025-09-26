@@ -1,0 +1,25 @@
+.s-gallery {
+  overflow: hidden;
+  &__slider {
+    @include laptop-middle {
+      overflow: visible !important;
+    }
+  }
+  &__slide {
+    transition: opacity .3s ease;
+    @include hover {
+      opacity: 0.7;
+    }
+    @include laptop-middle {
+      width: 355px !important;
+      max-width: 100%;
+    }
+
+    img {
+      display: block;
+      aspect-ratio: 1/1;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
