@@ -1,0 +1,82 @@
+.s-calculator {
+  margin-top: 50px !important;
+  @include laptop-min {
+    margin-top: 30px !important;
+  }
+  &__content {
+    max-width: 900px;
+    margin-bottom: 50px;
+    @include laptop-min {
+      margin-bottom: 30px;
+    }
+  }
+  &__form {
+    padding: 70px;
+    background-color: var(--gray);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 70px;
+    @include desktop {
+      padding: 50px;
+      gap: 50px;
+    }
+    @include laptop-middle {
+      gap: 30px;
+      padding: 30px;
+      grid-template-columns: 1fr;
+    }
+    @include tablet {
+      padding: 25px;
+    }
+    @include tablet-min {
+      padding: 25px 15px;
+    }
+  }
+  &__form-col {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    @include tablet-min {
+      flex-direction: column-reverse;
+    }
+
+    .input-name {
+      flex-shrink: 0;
+      margin: 0 !important;
+      @include tablet-min {
+        width: 100%;
+      }
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    @include laptop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include tablet-min {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__form-nav {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e2ebf7;
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__form-send {
+    width: 100%;
+  }
+}

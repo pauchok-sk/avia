@@ -1,10 +1,10 @@
 .breadcrumbs {
   padding: 25px 0px;
-  margin-bottom: 50px;
+  // margin-bottom: 50px;
   border-bottom: 2px solid var(--gray);
-  @include laptop-min {
-    margin-bottom: 30px;
-  }
+  // @include laptop-min {
+  //   margin-bottom: 30px;
+  // }
 }
 .aioseo-breadcrumbs {
   display: flex;
