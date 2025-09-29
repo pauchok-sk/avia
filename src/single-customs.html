@@ -4,7 +4,6 @@
   <body class="body">
     @@include('html/components/header.html')
     <main>
-      
       <div class="breadcrumbs">
         <div class="container">
           <div class="aioseo-breadcrumbs">
@@ -290,8 +289,8 @@
               />
               <h2 class="s-title">Оставить заявку на получение консультации</h2>
               <p class="content s-transportation__descr">
-                Если у Вас есть вопросы или Вы хотите сделать заявку, просто заполните
-                контактную форму, и мы ответим вам в ближайшее время
+                Если у Вас есть вопросы или Вы хотите сделать заявку, просто
+                заполните контактную форму, и мы ответим вам в ближайшее время
               </p>
             </div>
             <form action="#" class="form s-transportation__form js-form">
@@ -348,34 +347,27 @@
                 </div>
               </div>
               <div class="form__nav">
-                <span class="wpcf7-form-control-wrap">
-                  <span class="wpcf7-form-control wpcf7-acceptance">
-                    <span class="wpcf7-list-item">
-                      <label>
-                        <input type="checkbox" class="input-check" />
-                        <span class="wpcf7-list-item-label">
-                          <span>
-                            Я&nbsp;соглашаюсь с
-                            <a href="/personal-data" target="_blank">
-                              Политикой обработки персональных данных
-                            </a>
-                            и
-                            <a href="/privacy-policy" target="_blank">
-                              Политикой конфиденциальности
-                            </a>
-                          </span>
-                        </span>
-                      </label>
+                <label class="check-wrapper">
+                  <input type="checkbox" class="input-check" required />
+                  <span class="label-check">
+                    <span>
+                      Я&nbsp;соглашаюсь с
+                      <a href="/personal-data" target="_blank">
+                        Политикой обработки персональных данных
+                      </a>
+                      и
+                      <a href="/privacy-policy" target="_blank">
+                        Политикой конфиденциальности
+                      </a>
                     </span>
                   </span>
-                </span>
+                </label>
                 <button class="btn-s _pink form__send">Отправить</button>
               </div>
             </form>
           </div>
         </div>
       </section>
-
     </main>
     @@include('html/components/modals.html')
     @@include('html/components/footer.html')

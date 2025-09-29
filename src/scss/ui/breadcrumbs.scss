@@ -1,10 +1,13 @@
 .breadcrumbs {
   padding: 25px 0px;
-  // margin-bottom: 50px;
   border-bottom: 2px solid var(--gray);
-  // @include laptop-min {
-  //   margin-bottom: 30px;
-  // }
+
+  & + section:not(.intro) {
+    margin-top: 50px !important;
+    @include laptop-min {
+      margin-top: 30px !important;
+    }
+  }
 }
 .aioseo-breadcrumbs {
   display: flex;

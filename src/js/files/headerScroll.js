@@ -1,7 +1,7 @@
 export default function headerScroll() {
-  const header = document.querySelector(".header");
+  const header = document.querySelector(".header-b");
 
-  if (header) {
+  if (header && window.matchMedia("(min-width: 576px)").matches) {
     let lastScrollTop = 0;
 
     window.addEventListener("scroll", () => {

@@ -27,8 +27,6 @@
 }
 
 .header {
-  position: sticky;
-  top: 0;
   background-color: white;
   padding: 13px 0px;
   z-index: 90;
@@ -44,6 +42,11 @@
   }
   &._shadow {
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+  }
+
+  @include tablet-min {
+    position: sticky;
+    top: 0;
   }
 
   &__wrapper {
@@ -163,9 +166,28 @@
   position: relative;
   background-color: var(--gray);
   z-index: 60;
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+
   @include laptop-min {
     display: none;
   }
+  @media (min-width: 576px) {
+    position: sticky;
+    top: 0;
+  }
+
+  &._hide {
+    @media (min-width: 576px) {
+      transform: translateY(-100%);
+    }
+  }
+  &._shadow {
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07);
+  }
+
   &__wrapper {
     position: relative;
     display: flex;

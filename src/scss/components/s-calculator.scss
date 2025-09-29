@@ -1,8 +1,4 @@
 .s-calculator {
-  margin-top: 50px !important;
-  @include laptop-min {
-    margin-top: 30px !important;
-  }
   &__content {
     max-width: 900px;
     margin-bottom: 50px;

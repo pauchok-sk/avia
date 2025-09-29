@@ -9,27 +9,21 @@
         <input type="tel" placeholder="Телефон" class="input" />
       </div>
       <button class="btn-s modal__form-btn">Отправить</button>
-      <span class="wpcf7-form-control-wrap">
-        <span class="wpcf7-form-control wpcf7-acceptance">
-          <span class="wpcf7-list-item">
-            <label>
-              <input type="checkbox" class="input-check" />
-              <span class="wpcf7-list-item-label">
-                <span>
-                  Я&nbsp;соглашаюсь с
-                  <a href="/personal-data" target="_blank">
-                    Политикой обработки персональных данных
-                  </a>
-                  и
-                  <a href="/privacy-policy" target="_blank">
-                    Политикой конфиденциальности
-                  </a>
-                </span>
-              </span>
-            </label>
+      <label class="check-wrapper">
+        <input type="checkbox" class="input-check" required />
+        <span class="label-check">
+          <span>
+            Я&nbsp;соглашаюсь с
+            <a href="/personal-data" target="_blank">
+              Политикой обработки персональных данных
+            </a>
+            и
+            <a href="/privacy-policy" target="_blank">
+              Политикой конфиденциальности
+            </a>
           </span>
         </span>
-      </span>
+      </label>
     </form>
   </div>
 </div>
@@ -216,10 +210,8 @@
           </div>
         </div>
         <div class="modal-calc__form-view">
-          <div class="modal-calc__form-view-title">
-            Выберите удобный вид связи
-          </div>
-          <div class="modal-calc__form-view-grid">
+          <div class="input-name">Выберите удобный вид связи</div>
+          <div class="input-radios">
             <input
               type="radio"
               id="modal-view-connect-wh"
@@ -267,27 +259,21 @@
           </div>
         </div>
         <div class="modal-calc__form-nav">
-          <span class="wpcf7-form-control-wrap">
-            <span class="wpcf7-form-control wpcf7-acceptance">
-              <span class="wpcf7-list-item">
-                <label>
-                  <input type="checkbox" class="input-check" />
-                  <span class="wpcf7-list-item-label">
-                    <span>
-                      Я&nbsp;соглашаюсь с
-                      <a href="/personal-data" target="_blank">
-                        Политикой обработки персональных данных
-                      </a>
-                      и
-                      <a href="/privacy-policy" target="_blank">
-                        Политикой конфиденциальности
-                      </a>
-                    </span>
-                  </span>
-                </label>
+          <label class="check-wrapper">
+            <input type="checkbox" class="input-check" required />
+            <span class="label-check">
+              <span>
+                Я&nbsp;соглашаюсь с
+                <a href="/personal-data" target="_blank">
+                  Политикой обработки персональных данных
+                </a>
+                и
+                <a href="/privacy-policy" target="_blank">
+                  Политикой конфиденциальности
+                </a>
               </span>
             </span>
-          </span>
+          </label>
           <button class="btn-s _pink modal-calc__form-send">Отправить</button>
         </div>
       </div>

@@ -29,48 +29,7 @@
     padding: 15px 20px;
   }
 }
-.input-check {
-  display: none;
-  &:checked + span,
-  &:checked + .label-check {
-    &::before {
-      background: url("@img/check-white.svg") center / 12px auto no-repeat;
-      border-color: var(--primary);
-      background-color: var(--primary);
-    }
-  }
-}
 
-.input-check + span {
-  cursor: pointer;
-  display: flex;
-  align-items: start;
-  gap: 15px;
-
-  font-size: 14px;
-  color: #90959e;
-
-  a {
-    text-decoration: underline;
-    transition: color 0.3s ease;
-    @include hover {
-      color: var(--primary-l);
-    }
-  }
-
-  &::before {
-    content: "";
-    flex-shrink: 0;
-    background-color: white;
-    width: 22px;
-    height: 22px;
-    border: 1px solid #e9eef4;
-
-    transition:
-      background-color 0.3s ease,
-      border-color 0.3s ease;
-  }
-}
 .label-check {
   cursor: pointer;
   display: flex;
@@ -177,5 +136,16 @@
     @include tablet-min {
       width: 100%;
     }
+
+    &._fill {
+      width: 100%;
+    }
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: 1px solid #e2ebf7;
+    padding-top: 20px;
   }
 }
