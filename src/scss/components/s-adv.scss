@@ -2,18 +2,22 @@
   @include laptop-min {
     overflow: hidden;
   }
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    @include laptop {
+      gap: 80px;
+    }
+    @include laptop-min {
+      gap: 60px;
+    }
+  }
   &__grid {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 30px;
-    margin-bottom: 100px;
-    @include laptop {
-      margin-bottom: 80px;
-    }
-    @include laptop-min {
-      margin-bottom: 60px;
-    }
     @include tablet {
       gap: 20px;
       row-gap: 30px;
